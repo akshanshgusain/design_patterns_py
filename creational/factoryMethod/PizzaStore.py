@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from creational.simpleFactory.pizza import Pizza
+from creational.factoryMethod.Pizza import Pizza
 
 """
 Factory Method is a creational design pattern that provides an interface for creating objects in a superclass,
