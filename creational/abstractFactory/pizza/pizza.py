@@ -1,7 +1,7 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod, ABC
 from typing import List
 
-from creational.abstractFactory.ingredients.i_ingredients import *
+from creational.abstractFactory.ingredients.i_ingredients import IDough, ISauce, IVeggies, ICheese, IPepperoni, IClams
 
 
 # Product Class
@@ -23,7 +23,7 @@ class Pizza(ABC):
         pass
 
     def bake(self):
-        print(f" Bake for 25 minutes at 360")
+        print(f"Bake for 25 minutes at 360")
 
     def cut(self):
         print(f"Cutting the pizza into diagonal slices")
@@ -32,4 +32,4 @@ class Pizza(ABC):
         print(f"Place pizza in official pizza-store box")
 
     def get_name(self) -> str:
-        return self.name
+        return self.__class__.__name__

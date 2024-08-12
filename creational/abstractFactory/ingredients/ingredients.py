@@ -2,40 +2,50 @@ from creational.abstractFactory.ingredients.i_ingredients import *
 
 
 class ThinCrustIDough(IDough):
-    pass
+    def __init__(self):
+        print(f"Preparing Dough: {self.__class__.__name__}")
 
 
 class ExtraThickIDough(IDough):
-    pass
+    def __init__(self):
+        print(f"Preparing Dough: {self.__class__.__name__}")
 
 
 class MarinaraISauce(ISauce):
-    pass
+    def __init__(self):
+        print(f"Preparing Sauce: {self.__class__.__name__}")
 
 
 class PulmTomatoISauce(ISauce):
-    pass
+    def __init__(self):
+        print(f"Preparing Sauce: {self.__class__.__name__}")
 
 
 class MozzarellaCheese(ICheese):
-    pass
+    def __init__(self):
+        print(f"Adding Cheese: {self.__class__.__name__}")
 
 
 class ReggianoCheese(ICheese):
-    pass
+    def __init__(self):
+        print(f"Adding Cheese: {self.__class__.__name__}")
 
 
 class Garlic(IVeggies):
-    pass
+    def __init__(self):
+        print(f"Adding Toppings: {self.__class__.__name__}")
 
 
 class Onion(IVeggies):
-    pass
+    def __init__(self):
+        print(f"Adding Toppings: {self.__class__.__name__}")
 
 
 class Mushroom(IVeggies):
-    pass
+    def __init__(self):
+        print(f"Adding Toppings: {self.__class__.__name__}")
 
 
 class RedPepper(IVeggies):
-    pass
+    def __init__(self):
+        print(f"Adding Toppings: {self.__class__.__name__}")

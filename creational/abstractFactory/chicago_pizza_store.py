@@ -1,5 +1,6 @@
+from creational.abstractFactory.ingredients.factories.chicago_pizza_ingredient_factory import \
+    ChicagoPizzaIngredientFactory
 from creational.abstractFactory.ingredients.factories.i_pizza_ingredient_factory import IPizzaIngredientFactory
-from creational.abstractFactory.ingredients.factories.ny_pizza_ingredient_factory import NYPizzaIngredientFactory
 from creational.abstractFactory.pizza.cheese_pizza import CheesePizza
 from creational.abstractFactory.pizza.clam_pizza import ClamPizza
 from creational.abstractFactory.pizza.pepperoni_pizza import PepperoniPizza
@@ -8,12 +9,12 @@ from creational.abstractFactory.pizza_store import PizzaStore
 from creational.abstractFactory.pizza.veggie_pizza import VeggiePizza
 
 
-class NYPizzaStore(PizzaStore):
+class ChicagoPizzaStore(PizzaStore):
 
     def __init__(self):
         super().__init__()
         self.pizza = None
-        self.ingredient_factory: IPizzaIngredientFactory = NYPizzaIngredientFactory()
+        self.ingredient_factory: IPizzaIngredientFactory = ChicagoPizzaIngredientFactory()
         # create an ingredient factory
 
     def create_pizza(self, pizza_type: str) -> Pizza:

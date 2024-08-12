@@ -9,7 +9,7 @@ class VeggiePizza(Pizza):
         self.ingredient_factory = ingredient_factory
 
     def prepare(self):
-        print(f"Preparing {self.name}")
+        print(f"Preparing {self.__class__.__name__}")
         self.dough = self.ingredient_factory.create_dough()
         self.sauce = self.ingredient_factory.create_sauce()
         self.cheese = self.ingredient_factory.create_cheese()

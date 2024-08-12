@@ -28,7 +28,6 @@ class PizzaStore(ABC):
 
     def order_pizza(self, pizza_type: str) -> Pizza:
         pizza: Pizza = self.create_pizza(pizza_type)  # previously call to the simple-factory
-
         pizza.prepare()
         pizza.bake()
         pizza.cut()

@@ -18,7 +18,7 @@ class Pizza(ABC):
             print(f" {topping}")
 
     def bake(self):
-        print(f" Bake for 25 minutes at 360")
+        print(f"Bake for 25 minutes at 360")
 
     def cut(self):
         print(f"Cutting the pizza into diagonal slices")
@@ -27,4 +27,4 @@ class Pizza(ABC):
         print(f"Place pizza in official pizza-store box")
 
     def get_name(self) -> str:
-        return self.name
+        return self.__class__.__name__
