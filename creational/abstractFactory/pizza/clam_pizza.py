@@ -1,10 +1,10 @@
-from creational.abstractFactory.Pizza import Pizza
-from creational.abstractFactory.iPizzaIngredientFactory import PizzaIngredientFactory
+from creational.abstractFactory.pizza.pizza import Pizza
+from creational.abstractFactory.ingredients.factories.i_pizza_ingredient_factory import IPizzaIngredientFactory
 
 
-class CheesePizza(Pizza):
+class ClamPizza(Pizza):
 
-    def __init__(self, ingredient_factory: PizzaIngredientFactory):
+    def __init__(self, ingredient_factory: IPizzaIngredientFactory):
         super().__init__()
         self.ingredient_factory = ingredient_factory
 

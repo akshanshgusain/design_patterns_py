@@ -6,7 +6,7 @@ ingredient in the ingredient family. In other words, the factory will need to cr
 """
 from abc import abstractmethod
 from typing import List
-from creational.abstractFactory.ingredients.iIngredients import *
+from creational.abstractFactory.ingredients.i_ingredients import *
 
 # Abstract Factory
 """
@@ -18,28 +18,28 @@ Because our code is decoupled from the actual products, we can substitute differ
 """
 
 
-class PizzaIngredientFactory(ABC):
+class IPizzaIngredientFactory(ABC):
 
     @abstractmethod
-    def create_dough(self) -> Dough:
+    def create_dough(self) -> IDough:
         pass
 
     @abstractmethod
-    def create_sauce(self) -> Sauce:
+    def create_sauce(self) -> ISauce:
         pass
 
     @abstractmethod
-    def create_cheese(self) -> Cheese:
+    def create_cheese(self) -> ICheese:
         pass
 
     @abstractmethod
-    def create_veggies(self) -> List[Veggies]:
+    def create_veggies(self) -> List[IVeggies]:
         pass
 
     @abstractmethod
-    def create_pepperoni(self) -> Pepperoni:
+    def create_pepperoni(self) -> IPepperoni:
         pass
 
     @abstractmethod
-    def create_clam(self) -> Clams:
+    def create_clam(self) -> IClams:
         pass

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from creational.abstractFactory.ingredients.iIngredients import *
+from creational.abstractFactory.ingredients.i_ingredients import *
 
 
 # Product Class
@@ -9,12 +9,12 @@ from creational.abstractFactory.ingredients.iIngredients import *
 class Pizza(ABC):
     def __init__(self):
         self.name: str = ''
-        self.dough: Dough = Dough()
-        self.sauce: Sauce = Sauce()
-        self.veggies: List[Veggies] = []
-        self.cheese: Cheese = Cheese()
-        self.pepperoni: Pepperoni = Pepperoni()
-        self.clam: Clams = Clams()
+        self.dough: IDough = IDough()
+        self.sauce: ISauce = ISauce()
+        self.veggies: List[IVeggies] = []
+        self.cheese: ICheese = ICheese()
+        self.pepperoni: IPepperoni = IPepperoni()
+        self.clam: IClams = IClams()
 
     # We’ve now made the prepare method abstract. This is where we are going to collect the
     # ingredients needed for the pizza, which of course will come from the ingredient factory.
