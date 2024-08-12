@@ -24,4 +24,5 @@ class SingletonMeta(type):
 
 
 class Singleton(metaclass=SingletonMeta):
-    pass
+    def __init__(self, name: str):
+        self.name: str = name
