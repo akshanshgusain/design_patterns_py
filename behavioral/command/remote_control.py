@@ -1,17 +1,17 @@
-from behavioral.command.commands.Commands import Command, NoCommand
+from behavioral.command.commands.i_command import ICommand, NoCommand
 
 
 class RemoteControl:
 
     def __init__(self, number_of_commands: int):
-        self.on_commands: list[Command] = []
-        self.off_commands: list[Command] = []
-        no_command: Command = NoCommand()
+        self.on_commands: list[ICommand] = []
+        self.off_commands: list[ICommand] = []
+        no_command: ICommand = NoCommand()
         for i in range(number_of_commands):
             self.on_commands.append(no_command)
             self.off_commands.append(no_command)
 
-    def set_command(self, slot: int, on_command: Command, off_command: Command):
+    def set_command(self, slot: int, on_command: ICommand, off_command: ICommand):
         self.on_commands[slot] = on_command
         self.off_commands[slot] = off_command
 
