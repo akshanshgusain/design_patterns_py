@@ -1,6 +1,6 @@
 import math
-from structural.adapter.round.RoundPeg import RoundPeg
-from structural.adapter.client.SquarePeg import SquarePeg
+from structural.adapter.RoundPeg import RoundPeg
+from structural.adapter.SquarePeg import SquarePeg
 
 # Adapter allows fitting client pegs into round holes.
 """

@@ -1,5 +1,5 @@
 # RoundHoles are compatible with RoundPegs
-from structural.adapter.round.RoundPeg import RoundPeg
+from structural.adapter.RoundPeg import RoundPeg
 
 
 class RoundHole:
