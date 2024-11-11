@@ -5,6 +5,7 @@ The State Pattern allows an object to alter its behaviour when its internal stat
 The object will appear to change its class 
 '''
 
+
 class GumballMachine:
 	def __init__(self, count):
 		self.sold_out_state = SoldOutState(self)
